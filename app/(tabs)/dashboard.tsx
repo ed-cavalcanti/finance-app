@@ -4,7 +4,7 @@ import { ScrollView, Text, View } from "react-native";
 import CreditCard from "../components/CreditCard";
 import Header from "../components/Header";
 
-export default function dashboard() {
+export default function Dashboard() {
   return (
     <View className="items-center bg-base-white flex-1">
       <Header />
@@ -12,7 +12,7 @@ export default function dashboard() {
         <View className="flex-row items-center justify-between mb-4">
           <Text className="font-geist-medium text-xl">Meus Cartões</Text>
           <Link
-            href={"/(tabs)/dashboard"}
+            href={"/(tabs)/Wallet"}
             className="font-geist-medium text-sm text-secondary opacity-60"
           >
             Ver todos
