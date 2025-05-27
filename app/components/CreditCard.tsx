@@ -18,6 +18,13 @@ export default function CreditCard({
   value,
   flag,
 }: CreditCardProps) {
+  const toLocaleString = (value: number) => {
+    return value.toLocaleString("pt-BR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  };
+
   return (
     <View className="bg-cyber-green-300 w-80 h-24 rounded-2xl p-4 justify-between">
       <View className="flex-row justify-between">
@@ -39,13 +46,7 @@ export default function CreditCard({
       </View>
       <View>
         <View className="flex-row justify-between items-center">
-          <Text className="font-geist-bold text-xl">{`R$ ${value.toLocaleString(
-            "pt-BR",
-            {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2,
-            }
-          )}`}</Text>
+          <Text className="font-geist-bold text-xl">{`R$ ${toLocaleString(value)}`}</Text>
           {flag === "m" && (
             <Image
               source={mCardLogo}
