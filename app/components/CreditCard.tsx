@@ -2,6 +2,7 @@ import React from "react";
 import { Image, Text, View } from "react-native";
 import mCardLogo from "../../assets/images/mcard-logo.png";
 import vCardLogo from "../../assets/images/vcard-logo.png";
+import { amountFormater } from "../utils/formarters";
 
 type CreditCardProps = {
   cardName: string;
@@ -18,15 +19,8 @@ export default function CreditCard({
   value,
   flag,
 }: CreditCardProps) {
-  const toLocaleString = (value: number) => {
-    return value.toLocaleString("pt-BR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
-
   return (
-    <View className="bg-cyber-green-300 w-80 h-24 rounded-2xl p-4 justify-between">
+    <View className="bg-cyber-green-300 w-80 h-28 rounded-2xl p-4 justify-between">
       <View className="flex-row justify-between">
         <View className="flex-row">
           <Text className="text-sm font-geist">{cardName} | </Text>
@@ -46,7 +40,9 @@ export default function CreditCard({
       </View>
       <View>
         <View className="flex-row justify-between items-center">
-          <Text className="font-geist-bold text-xl">{`R$ ${toLocaleString(value)}`}</Text>
+          <Text className="font-geist-bold text-xl">
+            {amountFormater(value)}
+          </Text>
           {flag === "m" && (
             <Image
               source={mCardLogo}
