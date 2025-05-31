@@ -7,10 +7,10 @@ import {
 } from "phosphor-react-native";
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
-import CreditCard from "../components/CreditCard";
-import Header from "../components/Header";
-import PiggyBankCard from "../components/PiggyBankCard";
-import TransactionCard from "../components/TransactionCard";
+import CreditCard from "../../components/CreditCard";
+import Header from "../../components/Header";
+import PiggyBankCard from "../../components/PiggyBankCard";
+import TransactionCard from "../../components/TransactionCard";
 
 export default function Dashboard() {
   return (
@@ -23,7 +23,7 @@ export default function Dashboard() {
         <View className="flex-row items-center justify-between mb-4">
           <Text className="font-geist-medium text-xl">Meus Cartões</Text>
           <Link
-            href={"/(tabs)/Wallet"}
+            href={"/(app)/Wallet"}
             className="font-geist-medium text-sm text-secondary opacity-60"
           >
             Ver todos
@@ -52,7 +52,7 @@ export default function Dashboard() {
         <View className="flex-row items-center justify-between mb-4">
           <Text className="font-geist-medium text-xl">Cofrinhos</Text>
           <Link
-            href={"/(tabs)/Wallet"}
+            href={"/(app)/Wallet"}
             className="font-geist-medium text-sm text-secondary opacity-60"
           >
             Ver todos
@@ -79,7 +79,7 @@ export default function Dashboard() {
         <View className="flex-row items-center justify-between mb-4">
           <Text className="font-geist-medium text-xl">Últimas transações</Text>
           <Link
-            href={"/(tabs)/Wallet"}
+            href={"/(app)/Wallet"}
             className="font-geist-medium text-sm text-secondary opacity-60"
           >
             Ver todos

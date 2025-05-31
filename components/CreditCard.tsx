@@ -1,8 +1,8 @@
+import mCardLogo from "@/assets/images/mcard-logo.png";
+import vCardLogo from "@/assets/images/vcard-logo.png";
+import { amountFormater } from "@/utils/formarters";
 import React from "react";
 import { Image, Text, View } from "react-native";
-import mCardLogo from "../../assets/images/mcard-logo.png";
-import vCardLogo from "../../assets/images/vcard-logo.png";
-import { amountFormater } from "../utils/formarters";
 
 type CreditCardProps = {
   cardName: string;
@@ -12,13 +12,13 @@ type CreditCardProps = {
   flag: "m" | "v";
 };
 
-export default function CreditCard({
+const CreditCard = ({
   cardName,
   lastNum,
   type,
   value,
   flag,
-}: CreditCardProps) {
+}: CreditCardProps) => {
   return (
     <View className="bg-cyber-green-300 w-80 h-28 rounded-2xl p-4 justify-between">
       <View className="flex-row justify-between">
@@ -61,4 +61,6 @@ export default function CreditCard({
       </View>
     </View>
   );
-}
+};
+
+export default CreditCard;

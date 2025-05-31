@@ -7,7 +7,7 @@ import {
   User,
 } from "phosphor-react-native";
 import { View } from "react-native";
-import TabBar from "../components/TabBar";
+import TabBar from "../../components/TabBar";
 
 export default function TabsLayout() {
   return (

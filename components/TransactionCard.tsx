@@ -1,7 +1,7 @@
+import { amountFormater, baseDateFormater } from "@/utils/formarters";
 import type { IconProps } from "phosphor-react-native";
 import React from "react";
 import { Text, View } from "react-native";
-import { amountFormater, baseDateFormater } from "../utils/formarters";
 
 interface TransactionCardProps {
   Icon: React.ElementType<IconProps>;
@@ -11,13 +11,13 @@ interface TransactionCardProps {
   category: string;
 }
 
-export default function TransactionCard({
+const TransactionCard = ({
   Icon,
   amount,
   date,
   title,
   category,
-}: TransactionCardProps) {
+}: TransactionCardProps) => {
   return (
     <View className="flex-row justify-between items-center">
       <View className="flex-row items-center gap-2">
@@ -41,4 +41,6 @@ export default function TransactionCard({
       </View>
     </View>
   );
-}
+};
+
+export default TransactionCard;

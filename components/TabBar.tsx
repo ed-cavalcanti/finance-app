@@ -2,11 +2,7 @@ import type { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
 
-export default function TabBar({
-  state,
-  descriptors,
-  navigation,
-}: BottomTabBarProps) {
+const TabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   return (
     <View
       className="flex-row h-[5rem] mx-6 mb-8 rounded-2xl bg-dark-gray py-4 px-4 items-center justify-between"
@@ -90,4 +86,6 @@ export default function TabBar({
       })}
     </View>
   );
-}
+};
+
+export default TabBar;

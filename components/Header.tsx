@@ -1,14 +1,14 @@
+import headerStars from "@/assets/images/header-stars.png";
+import { amountFormater } from "@/utils/formarters";
 import React from "react";
 import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import headerStars from "../../assets/images/header-stars.png";
-import { amountFormater } from "../utils/formarters";
 
 interface HeaderProps {
   totalAmount: number;
 }
 
-export default function Header({ totalAmount }: HeaderProps) {
+const Header = ({ totalAmount }: HeaderProps) => {
   return (
     <View className="bg-light-gray w-full px-6 rounded-b-3xl">
       <SafeAreaView className="mt-14">
@@ -31,4 +31,6 @@ export default function Header({ totalAmount }: HeaderProps) {
       </SafeAreaView>
     </View>
   );
-}
+};
+
+export default Header;

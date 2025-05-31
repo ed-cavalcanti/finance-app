@@ -1,7 +1,7 @@
+import { amountFormater } from "@/utils/formarters";
 import type { IconProps } from "phosphor-react-native";
 import React from "react";
 import { Text, View } from "react-native";
-import { amountFormater } from "../utils/formarters";
 
 interface PiggyBankCardProps {
   Icon: React.ElementType<IconProps>;
@@ -10,12 +10,7 @@ interface PiggyBankCardProps {
   title: string;
 }
 
-export default function PiggyBankCard({
-  Icon,
-  goal,
-  amount,
-  title,
-}: PiggyBankCardProps) {
+const PiggyBankCard = ({ Icon, goal, amount, title }: PiggyBankCardProps) => {
   const percentage = Math.floor((amount / goal) * 100);
 
   return (
@@ -39,4 +34,6 @@ export default function PiggyBankCard({
       </View>
     </View>
   );
-}
+};
+
+export default PiggyBankCard;
